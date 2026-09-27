@@ -1,0 +1,33 @@
+# Dependências
+node_modules/
+
+# Variáveis de ambiente
+.env
+.env.*
+*.env
+
+# Terraform
+.terraform/
+.terraform.lock.hcl
+*.tfstate
+*.tfstate.*
+terraform.tfstate
+terraform.tfstate.backup
+terraform.tfvars
+*.tfvars
+
+# Chaves e certificados
+*.pem
+*.key
+
+# Logs
+*.log
+npm-debug.log*
+
+# IDEs e editores
+.vscode/
+.idea/
+
+# Sistemas operacionais
+.DS_Store
+Thumbs.db

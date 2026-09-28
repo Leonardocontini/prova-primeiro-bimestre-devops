@@ -19,6 +19,7 @@ terraform.tfvars
 # Chaves e certificados
 *.pem
 *.key
+*.pub
 
 # Logs
 *.log

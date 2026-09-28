@@ -1,47 +1,24 @@
 services:
+
   api:
     build:
       context: ./app
       dockerfile: Dockerfile
+
     container_name: reservas-api
+
+    restart: unless-stopped
+
     ports:
-      - "${PORT:-3000}:${PORT:-3000}"
-    environment:
-      PORT: ${PORT:-3000}
-      DB_HOST: postgres
-      DB_PORT: 5432
-      DB_NAME: ${DB_NAME:-reservas_db}
-      DB_USER: ${DB_USER:-usuario}
-      DB_PASSWORD: ${DB_PASSWORD:-senha_segura}
-    depends_on:
-      postgres:
-        condition: service_healthy
+      - "3000:3000"
+
+    env_file:
+      - .env
+
     networks:
       - reservas-network
-
-  postgres:
-    image: postgres:16-alpine
-    container_name: reservas-postgres
-    environment:
-      POSTGRES_DB: ${DB_NAME:-reservas_db}
-      POSTGRES_USER: ${DB_USER:-usuario}
-      POSTGRES_PASSWORD: ${DB_PASSWORD:-senha_segura}
-    ports:
-      - "${DB_EXTERNAL_PORT:-5432}:5432"
-    volumes:
-      - postgres_data:/var/lib/postgresql/data
-      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
-    healthcheck:
-      test: ["CMD-SHELL", "pg_isready -U ${DB_USER:-usuario} -d ${DB_NAME:-reservas_db}"]
-      interval: 5s
-      timeout: 5s
-      retries: 5
-    networks:
-      - reservas-network
-
-volumes:
-  postgres_data:
 
 networks:
+
   reservas-network:
     driver: bridge

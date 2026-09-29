@@ -1,4 +1,4 @@
-# prova-primeiro-bimestre-devops
+# Prova Primeiro Bimestre Devops
 
 **Aluno:** Leonardo Rafael Contini Costa 
 **RA:** 6325054  

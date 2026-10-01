@@ -7,6 +7,9 @@
 API de Reservas construída com Node.js/Express e PostgreSQL, containerizada com Docker e com infraestrutura provisionada na AWS via Terraform modularizado.
 
 ---
+**Evidências e relatório com todos os meus prompts da IA estão na pasta evidências**
+
+---
 
 ## Rodar local com Docker Compose
 
@@ -69,7 +72,7 @@ rm docker-compose.yml
 cp docker-compose.yml.example docker-compose.yml
 
 ```
-Faça isso para API gravar os dados na RDS, caso contraio o docker vai subir uma imagem postgres dentro da EC2 e irá guardar os dados dentro de seu compose local
+Faça isso para API gravar os dados na RDS, caso contraio o docker vai subir uma imagem postgres dentro da EC2 e irá guardar os dados dentro de seu compose local (será necessário a criação de um novo repositório ou um fork e atualizar os dados em scripts/user_data.sh)
 
 **Suba o bootstrap (S3 + DynamoDB para remote state):**
 

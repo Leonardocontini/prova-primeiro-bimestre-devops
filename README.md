@@ -7,6 +7,8 @@
 API de Reservas construída com Node.js/Express e PostgreSQL, containerizada com Docker e com infraestrutura provisionada na AWS via Terraform modularizado.
 
 ---
+**Evidências e relatório com todos os meus prompts da IA estão na pasta evidências**
+---
 
 ## Rodar local com Docker Compose
 

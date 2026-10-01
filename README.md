@@ -157,7 +157,7 @@ curl http://<EC2_PUBLIC_IP>:3000/api/reservas
 
 **Configs do OS da maquina**
 
-![](evidencias/Imagem%20colada%20(27).png)
+![](evidencias/Imagem%20colada%20(28).png)
 
 
 

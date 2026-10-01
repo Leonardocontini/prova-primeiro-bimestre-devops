@@ -23,7 +23,7 @@ As aulas foram aplicadas de forma progressiva: desenvolvimento e versionamento n
 
 ## Questão 2 — O Processo com IA como Copiloto
 
-Utilizei o **ChatGPT como ferramenta de IA**, principalmente como copiloto durante o desenvolvimento. Eu apresentava os requisitos da atividade e trechos do código e utilizava a IA para gerar uma primeira versão, explicar erros e sugerir correções.
+Utilizei o **ChatGPT e o Kiro como ferramenta de IA**, principalmente como copiloto durante o desenvolvimento. Eu apresentava os requisitos da atividade e trechos do código e utilizava a IA para gerar uma primeira versão, explicar erros e sugerir correções.
 
 Alguns dos prompts foram relacionados à criação da API Node.js, configuração do Docker Compose, criação dos módulos Terraform, configuração do RDS e EC2 e integração entre a API e o banco de dados.
 
@@ -126,7 +126,7 @@ docker ps
 e testei a API:
 
 ```bash
-curl http://localhost:3000/health
+curl http://<ip-da-ec2>:3000/health
 ```
 
 Também conferi se a aplicação estava recebendo as variáveis corretas do RDS.
